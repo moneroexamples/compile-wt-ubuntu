@@ -29,12 +29,15 @@ code from [Wt github's page](https://github.com/kdeforche/wt), or tagged version
 # download the latest wt source code from github
 git clone https://github.com/kdeforche/wt.git
 
+# cd into wt folder
+cd wt/
+
 # select which version to checkout.
 # For example, to checkout tag 3.3.5
 git checkout -b 3.3.5  
 
-# cd into wt folder, and then make build/ folder and cd into it
-cd wt/ && mkdir build && cd ./build
+#  and then make build/ folder and cd into it
+mkdir build && cd ./build
 
 # compile using c++11 and set install directory to “/opt/wt”:
 # without c++11 mode, compilation fails.
