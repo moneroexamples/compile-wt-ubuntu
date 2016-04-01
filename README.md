@@ -1,4 +1,4 @@
-# Compile Monero 0.9 on Ubuntu 16.04 x64 Beta
+# Compile Wt, C++ Web Toolkit, on Ubuntu 16.04 x64
 
 The example shows how to compile the current github version of [Wt - C++ Web Toolkit](http://www.webtoolkit.eu/wt) on Ubuntu 16.04 x64.
 
@@ -6,7 +6,7 @@ The example shows how to compile the current github version of [Wt - C++ Web Too
 Before proceeding with the compilation, the following packages are required:
 
 ```bash
-# update Xubuntu's repository
+# update Ubuntu's repository
 sudo apt-get update
 
 #install git to download latest Wt source code from github
