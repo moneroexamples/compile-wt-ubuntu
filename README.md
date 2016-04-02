@@ -54,10 +54,6 @@ make # or make -j number_of_threads, e.g., make -j 2
 
 # install into /opt/wt
 sudo make install
-
-# compile Wt examples while still being in the build/ folder
-make -C examples/
-
 ```
 
 ## Installation
@@ -316,8 +312,8 @@ tree -L 3 /opt/wt/
 
 ## Running some Wt examples
 
-The examples where compiled in `wt/build/examples` as shown above, and the
-examples binaries are in that folder. However, **the best way to run the examples
+After compilation of examples in `wt/build/examples` as shown  bewlo,the
+examples binaries are will be in that folder. However, **the best way to run the examples
 is from their source folders**, not the build folder. The reason is that
 the source folders contain, except
 the c++ source files, csv files, image files, template files, used in the examples.
@@ -325,6 +321,13 @@ If examples are run from their source folders, they can also find files located 
  `wt/resources/` which they use.
 
 ```bash
+
+# before we can run examples we need to compile them.
+# if still in build/ folder then this can be done as follows
+
+# compile Wt examples while still being in the build/ folder
+make -C examples/
+
 # go to wt/examples source code
 # if still in build/ folder than this can be done as follows
 cd ../examples
