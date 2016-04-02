@@ -55,19 +55,17 @@ make # or make -j number_of_threads, e.g., make -j 2
 # install into /opt/wt
 sudo make install
 
-# compile Wt examples
+# compile Wt examples while still being in the build/ folder
 make -C examples/
 
-# move examples into /opt/wt/
-sudo mv -v examples/ /opt/wt/
 ```
 
 ## Installation
-After successful compilation, the Wt files should be located in `/opt/wt` as shown below
-(examples folder excluded from tree):
+After successful compilation and installation, the Wt files should
+be located in `/opt/wt` as shown below:
 
 ```bash
-tree -L 3 -I "examples" /opt/wt/
+tree -L 3 /opt/wt/
 /opt/wt/
 ├── include
 │   └── Wt
@@ -317,10 +315,43 @@ tree -L 3 -I "examples" /opt/wt/
 ```
 
 ## Running some Wt examples
+
+The examples where compiled in `wt/build/examples` as shown above, and the
+examples binaries are in that folder. However, **the best way to run the examples
+is from their source folders**, not the build folder. The reason is that
+the source folders contain, except
+the c++ source files, csv files, image files, template files, used in the examples.
+If examples are run from their source folders, they can also find files located in
+ `wt/resources/` which they use.
+
 ```bash
+# go to wt/examples source code 
+# if still in build/ folder than this can be done as follows
+cd ../examples
+
+######################
 # hello example
-/opt/wt/examples/hello/hello.wt --http-port 8080 --http-addr 0.0.0.0 --docroot .
+######################
+cd helo/
+../../build/examples/hello/hello.wt --http-port 8080 --http-addr 0.0.0.0 --docroot .
+
+
+######################
+# wt-homepage example
+######################
+cd wt-homepage/
+../../build/examples/wt-homepage/home.wt --http-port 8080 --http-addr 0.0.0.0 --docroot .
+
+
+######################
+# wt-homepage example
+######################
+cd javascript/
+../../build/examples/javascript/javascript.wt --http-port 8080 --http-addr 0.0.0.0 --docroot .
 ```
+
+
+
 
 ## Other examples
 Other examples can be found on  [github](https://github.com/moneroexamples?tab=repositories).
