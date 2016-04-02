@@ -325,14 +325,14 @@ If examples are run from their source folders, they can also find files located 
  `wt/resources/` which they use.
 
 ```bash
-# go to wt/examples source code 
+# go to wt/examples source code
 # if still in build/ folder than this can be done as follows
 cd ../examples
 
 ######################
 # hello example
 ######################
-cd helo/
+cd hello/
 ../../build/examples/hello/hello.wt --http-port 8080 --http-addr 0.0.0.0 --docroot .
 
 
@@ -348,13 +348,20 @@ cd wt-homepage/
 ######################
 cd javascript/
 ../../build/examples/javascript/javascript.wt --http-port 8080 --http-addr 0.0.0.0 --docroot .
+
+
+######################
+# charts example
+######################
+cd charts/
+../../build/examples/charts/charts.wt --http-port 8080 --http-addr 0.0.0.0 --docroot .
+
+# ...
+# and so forth for other examples
 ```
 
-
-
-
-## Other examples
-Other examples can be found on  [github](https://github.com/moneroexamples?tab=repositories).
+## Other repositories of mine
+Other repositories can be found on  [github](https://github.com/moneroexamples?tab=repositories).
 Please know that some of the examples/repositories are not
 finished and may not work as intended.
 
